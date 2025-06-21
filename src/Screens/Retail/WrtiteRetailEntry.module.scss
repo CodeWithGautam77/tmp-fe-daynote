@@ -1,0 +1,169 @@
+.amountBox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.incomeAmountTextBox {
+    width: 60%;
+    height: 3.5rem;
+    background-color: #fff;
+    border-radius: .3rem;
+}
+
+.frequentlyNumBox {
+    width: 49%;
+    // height: 3.5rem;
+    // background-color: #fff;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+}
+
+.frequentlyNumber {
+    background-color: #f0f0f0;
+    padding: 5px 8px;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.frequentlyNumber:hover {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.amountTextBox {
+    height: 4.8rem;
+    background-color: #fff;
+    border-radius: .3rem;
+}
+
+.textBox {
+    height: 4.8rem;
+    background-color: #fff;
+    // margin-top: .1rem;
+    border-radius: .3rem;
+}
+
+.mainWriteBox {
+    display: flex;
+    gap: .2rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.inputLabel {
+    font-weight: 850;
+    font-size: 1rem;
+    // padding-bottom: .3rem;
+}
+
+.incodeAmountBoxGrp {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.expenseAmountBoxGrp {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+/* Container for buttons */
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // justify-content: space-evenly;
+}
+
+/* Style for the label wrapping the checkbox */
+.buttonContainer label {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    background-color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    // color: #333;
+}
+
+/* On hover, add some interaction */
+.buttonContainer label:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style the checkbox */
+// .buttonContainer input[type="checkbox"] {
+//     display: none;
+//     /* Hide the checkbox */
+// }
+
+/* Active button style (selected) */
+.buttonContainer input[type="checkbox"]:checked+label {
+    // display: block;
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add an icon or custom styling to differentiate checked buttons */
+.buttonContainer input[type="checkbox"]:checked+label:before {
+    content: "✔ ";
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.updateHeader {
+    display: flex;
+    gap: .5rem;
+}
+
+.closeBtn {
+    background-color: red !important;
+    padding: 0.3rem !important;
+}
+
+.incomeBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.expenseBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deletIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.autoSumitBox {
+    height: 100%;
+    // margin-top: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: #fff;
+    border-radius: .3rem;
+    padding: .2rem 0rem;
+}

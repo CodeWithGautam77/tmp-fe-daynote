@@ -1,0 +1,105 @@
+.mainNavBar{
+  width: 100%;
+  height: 5.5rem; /* 50px */
+  background-color: #E2E2E2;
+}
+
+.bottomNavBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5rem; /* 20px */
+  box-shadow: 0rem -0.09375rem 0.65625rem 0rem #00000029; /* 0px -1.5px 10.5px 0px */
+  position: fixed;
+  bottom: 20;
+  left: 0;
+  right: 0;
+  height: 4rem; /* 50px */
+  z-index: 1000;
+  margin: 0rem 10rem 0.8rem; /* 0rem 5rem .8rem */
+}
+
+.navItem {
+  position: relative;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  background-color: #fff !important; 
+  border-radius: 50%;
+  padding: .5rem;
+}
+
+.navItem:after {
+  content: '';
+  position: absolute;
+  /* border: 0.2425rem solid; */ /* 3.88px */
+  top: -0.2425rem; /* -3.88px */
+  left: -0.2425rem; /* -3.88px */
+  right: -0.2425rem; /* -3.88px */
+  bottom: -0.2425rem; /* -3.88px */
+  border-radius: 50%;
+  background: linear-gradient(180deg, #B00000 0%, #790000 100%);
+  z-index: -1; /* Place it behind the navItem content */
+}
+
+.centralButton {
+  // position: absolute;
+  background: linear-gradient(180deg, #B00000 0%, #790000 100%);
+  border-radius: 50%;
+  width: 5rem; /* 62px */
+  height: 5rem; /* 62px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2); /* 0 2px 10px */
+
+  .icon {
+    // background-color: #fff;
+    width: 2.5rem; /* 30px */
+    height: 2.5rem; /* 30px */
+    // border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.icon {
+  width: 1.50rem; /* 20px */
+  height: 1.50rem; /* 20px */
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.borrowRedIcon {
+    background-image: url('../Image/red/borrowRed.png');
+  }
+
+  &.longborrowRedIcon {
+    background-image: url('../Image/red/long-term-borrowRed.png');
+  }
+
+  &.masterRedIcon {
+    background-image: url('../Image/red/masterRed.png');
+  }
+  
+  &.mainAccRedIcon {
+    background-image: url('../Image/red/mainAccRed.png');
+  }
+
+  &.borrowWhiteIcon {
+    background-image: url('../Image/white/borrowWhite.png');
+  }
+
+  &.longborrowWhiteIcon {
+    background-image: url('../Image/white/long-term-borrowWhite.png');
+  }
+
+  &.masterWhiteIcon {
+    background-image: url('../Image/white/masterWhite.png');
+  }
+
+  &.mainAccWhiteIcon {
+    background-image: url('../Image/white/userWhite.png');
+  }
+}

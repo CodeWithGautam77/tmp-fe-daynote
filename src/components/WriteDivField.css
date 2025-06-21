@@ -1,0 +1,55 @@
+div[contenteditable="true"] {
+  position: relative; /* Ensure proper positioning for pseudo-elements */
+}
+
+div[contenteditable="true"]::before {
+  content: attr(data-placeholder); /* Dynamic left-side placeholder text */
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: gray;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+div[contenteditable="true"]::after {
+  content: attr(
+    data-placeholder-right
+  ); /* Dynamic right-side placeholder text */
+  position: absolute;
+  right: -10px;
+  bottom: 0.1rem;
+  color: gray;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+div[contenteditable="true"]:focus::before,
+div[contenteditable="true"]:not(:empty)::before {
+  content: ""; /* Hide placeholders when content exists or field is focused */
+  opacity: 0;
+}
+
+.disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.clear-button {
+  position: absolute;
+  bottom: 0rem !important;
+  right: 0.3rem;
+  color: #ff6666;
+  background: transparent !important;
+  z-index: 1;
+}
+
+.clear-button:hover {
+  background: rgba(255, 102, 102, 0.2);
+}

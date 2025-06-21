@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gap-05 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+.flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flexEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flexAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flexEvenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flexStretch {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #b00000 0%, #790000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.cursurPointer {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.MuiAccordion-root::before {
+  height: 0 !important;
+  opacity: 0 !important;
+}
+
+.MuiAccordionSummary-content {
+  margin: 0.5rem 0 !important;
+}
+
+.dataAccordion {
+  margin-top: 1rem;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+.accordionEditIconBtn {
+  background: #d9d9d9 !important;
+  color: #017421 !important;
+}
+
+.dataAccordionSummary {
+  background-color: #fff;
+  border-radius: 0.5rem !important;
+  box-shadow: 0px 0px 15px 0px #0000001a !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  /* gap: 1rem !important; */
+}
+
+.dataAccordionDetails {
+  margin-top: 1rem !important;
+  background: #fff;
+  border-radius: 0.25rem !important;
+  padding: 1rem !important;
+  box-shadow: 0px 0px 5px 0px #00000057 !important;
+}
+.dataName {
+  text-align: start !important;
+  text-wrap: nowrap !important;
+  overflow: hidden !important;
+  width: 100%;
+  text-overflow: ellipsis !important;
+}
+.paginationInfo {
+  background-color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0rem 1rem !important;
+  font-weight: 600 !important;
+}
+
+.paginationButton {
+  border: 1px solid #950000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  /* padding: 0.4rem 0.5rem 0.3rem 0.5rem; */
+}
+.modalContent {
+  padding-bottom: 0rem !important;
+}
+.modalHeader {
+  background: linear-gradient(180deg, #b00000 0%, #790000 100%);
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem !important;
+  font-size: large !important;
+  padding: 0.7rem 0rem !important;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
+.modalFooter {
+  /* background-color: #af000021; */
+}
+
+.inputBox {
+  margin-bottom: 0.6rem;
+}
+
+.btnRed {
+  background: #800000 !important;
+  color: #fff !important;
+}
+
+.btnGreen {
+  background: #68b32f !important;
+  color: #fff !important;
+}
+
+.cancelBtn {
+  background: #800000 !important;
+}
+
+.submitBtn {
+  background: #004b89 !important;
+}
+
+.writeInput {
+  background-color: #fff;
+  height: 3rem;
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.writeInputError {
+  background-color: #fff;
+  height: 3rem;
+  border: 1px solid red;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.rowbgColor1 {
+  background-color: #af000021 !important;
+}
+.rowbgColor2 {
+  background-color: #fff !important;
+}
+
+.writing {
+  transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+  transform: scale(2);
+}
+
+.swal2-container {
+  z-index: 2000;
+}
+
+.my-date-range-picker .rdrDefinedRangesWrapper{
+  width: 60px !important;
+  transition: width 0.3s ease-in-out;
+}
+
+.my-date-range-picker .rdrDefinedRangesWrapper:hover{
+  width: 200px !important;
+}
+
+.my-date-range-picker .rdrDefinedRangesWrapper .rdrStaticRanges .rdrStaticRange .rdrStaticRangeLabel{
+  width: 100% !important;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

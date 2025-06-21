@@ -1,0 +1,60 @@
+.main {
+    padding-top: .5rem;
+    // border: 1px solid red;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.7rem;
+    align-items: center;
+}
+
+.captureBtn {
+    width: 80px;
+    height: 80px;
+    // top: 50%;
+    // left: 50%;
+    // margin-top: -50px;
+    // margin-left: -50px;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    bottom: 15%;
+    right: 15%;
+    border-radius: 100%;
+    background-color: #950000;
+    opacity: 1;
+}
+
+.ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    border: 0.5em solid #950000;
+    opacity: 0.8;
+}
+
+.captureBtn .circle,
+.captureBtn .ring {
+    transition: all 0.25s;
+}
+
+.captureBtn:hover .circle {
+    opacity: 1;
+}
+
+.captureBtn:active .ring {
+    opacity: 1;
+}
+
+.captureBtn:active .circle {
+    opacity: 0.5;
+}

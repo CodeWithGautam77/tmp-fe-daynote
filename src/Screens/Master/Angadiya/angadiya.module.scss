@@ -1,0 +1,31 @@
+.custBox {
+    padding: 1rem;
+}
+
+.dataBox {
+    margin: 1rem 0;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.sr {
+    min-width: 1rem;
+}
+
+.date {
+    min-width: 8rem;
+}
+
+.amount {
+    min-width: 5rem;
+}
+
+.type {
+    min-width: 5rem;
+}
+
+.hDetailBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

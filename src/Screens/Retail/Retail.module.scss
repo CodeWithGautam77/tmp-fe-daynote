@@ -1,0 +1,246 @@
+// .main {
+//     padding-top: 1rem;
+// }
+
+.writingGrp {
+    margin: .5rem;
+}
+
+.skeleton {
+    margin: 1rem .5rem;
+    max-width: 100%;
+    padding: 0rem .5rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.calcuBox {
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+
+}
+
+.amtWriteInput {
+    background-color: #fff;
+    height: 3rem;
+    width: 40%;
+    margin-left: .8rem;
+}
+
+.minusText {
+    margin-left: 1rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.subMain {
+    margin: 1rem .5rem 0rem .5rem;
+    display: flex;
+    gap: .5rem;
+    max-width: 100%;
+}
+
+.verticalHr {
+    border: 1px solid #950000;
+    height: auto;
+    margin: 0;
+}
+
+.previousCashEntryBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom: 2px solid #950000;
+}
+
+.incomeBox {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.incomeFinalTotalBox {
+    width: 99%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.incomeFinalTotal {
+    border-left: 2px solid #950000;
+    border-right: 2px solid #950000;
+    border-bottom: 2px solid #950000;
+    width: 32%;
+    background: #FFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-left: .3rem;
+}
+
+.noteBox {
+    background-color: #FFF;
+}
+
+.noteHeader {
+    gap: .1rem;
+}
+
+.expenseBox {
+    background-color: #FFF;
+}
+
+.detialBox {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #950000;
+    // height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+
+    // &:last-child {
+    //     border-bottom: none !important; // Remove border-top for the first child
+    // }
+}
+
+.noteDataBox {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #950000;
+    height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.indexNum {
+    margin: 0rem .2rem;
+    width: 3%;
+}
+
+.expenseIndexNum {
+    margin-right: .2rem;
+    min-width: 1.2rem;
+}
+
+.typeText {
+    width: 17%;
+    padding-left: .2rem
+}
+
+.deletIcon {
+    margin-right: .3rem;
+    margin-left: .3rem;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amtText {
+    margin-bottom: 0;
+    margin-left: .2rem;
+    width: 100%;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.exAmtText {
+    margin-bottom: 0;
+    padding-left: .2rem;
+    width: 20%;
+    height: 28px;
+    cursor: pointer;
+    border-right: 1px solid #950000;
+    display: flex;
+    align-items: center;
+}
+
+.nameText {
+    text-transform: capitalize;
+    border-right: 1px solid #950000;
+    width: 57%;
+    height: 28px;
+    padding: .2rem .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+.btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.totalBox {
+    width: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+        margin-bottom: 0;
+    }
+}
+
+.dTotalText {
+    width: 100%;
+    border-top: 1px solid #950000;
+    font-weight: 700;
+    padding: .5rem .3rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.exTotalText {
+    width: 100%;
+    border-top: 1px solid #950000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.totalAmtBox {
+    width: 33%;
+    border-right: 1px solid #950000;
+    padding-left: .2rem;
+}
+
+.finalTotalAmtBox {
+    width: 30%;
+
+    padding-left: .2rem;
+}
+
+.cTotalAmt {
+    font-weight: 900;
+}
+
+.dTotalAmt {
+    font-weight: 900;
+}
+
+@media (max-width: 800px) {
+    .cTotalAmt {
+        font-size: 1.1rem;
+    }
+
+    .dTotalAmt {
+        font-size: 1.1rem;
+
+    }
+}

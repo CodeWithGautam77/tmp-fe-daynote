@@ -1,0 +1,131 @@
+.custBox {
+    padding: 1rem;
+}
+
+.dataBox {
+    margin: 1rem 0;
+    height: 800px;
+    overflow-y: scroll;
+}
+
+.date {
+    min-width: 17.5%;
+}
+
+.byWhom {
+    width: 30%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.amount {
+    min-width: 17.5%;
+}
+
+.type {
+    min-width: 10rem;
+}
+
+.etype {
+    min-width: 4rem;
+}
+
+.hDetailBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.isCreditWriteBox {
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+    transform: scale(1.5) translateX(-2.7rem) translateY(1rem);
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    // width: 70%;
+    // height: 2rem;
+    position: relative;
+    z-index: 1000;
+    border-radius: .3rem;
+    // background-color: ;
+
+}
+
+.writeBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 4px 0px 0px #00000040;
+    border-radius: .3rem;
+}
+
+.subWriteBox {
+    box-shadow: 0px 0px 5px 3px #00000040;
+    border-radius: .3rem;
+
+}
+
+.writeInput {
+    background-color: #fff;
+    width: 15rem;
+    height: 3rem;
+    border-radius: inherit;
+    outline: none;
+    position: absolute;
+    box-shadow: 0px 0px 5px 3px #00000040;
+
+}
+
+.closeBtn {
+    background-color: red !important;
+    padding: .3rem !important;
+}
+
+.historyTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+
+    // Add these new styles
+    .accordionContent {
+        width: 100%;
+        padding: 0;
+
+        // Style for inner table
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+
+            td {
+                border: 1px solid black;
+                padding: 8px;
+            }
+        }
+    }
+
+    th {
+        background-color: #f8f8f8;
+    }
+
+    .amountCell {
+        text-align: right;
+    }
+
+    .deleteCell {
+        width: 50px;
+        text-align: center;
+    }
+}

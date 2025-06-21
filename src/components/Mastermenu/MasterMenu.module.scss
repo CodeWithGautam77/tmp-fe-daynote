@@ -1,0 +1,71 @@
+.menuBox {
+    background-color: white;
+    // margin: 2rem 1rem .5rem .5rem;
+    margin: 6rem .5rem 0rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .2rem 0rem;
+    border: 1px solid #950000;
+    border-radius: .5rem;
+    // width: max-content;
+}
+
+.iconBox {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabBox {
+    border: 3px solid transparent;
+    border-radius: 50%;
+}
+
+.selectedTabBox {
+    border: 3px solid #950000;
+    border-radius: 50%;
+}
+
+.tabBox:nth-child(1) .iconBox {
+    background-color: #58A4B0;
+}
+
+.tabBox:nth-child(2) .iconBox {
+    background-color: #EE6352;
+}
+
+.tabBox:nth-child(3) .iconBox {
+    background-color: #FAC05E;
+}
+
+.tabBox:nth-child(6) .iconBox {
+    background-color: #FF6783;
+}
+
+.tabBox:nth-child(7) .iconBox {
+    background-color: #42A8D8;
+}
+
+.tabBox:nth-child(4) .iconBox {
+    background-color: #0B773B;
+}
+
+.tabBox:nth-child(5) .iconBox {
+    background-color: #0060B9;
+}
+
+.tabBox:nth-child(8) .iconBox {
+    background-color: #688FF9;
+}
+
+.tabBox:nth-child(9) .iconBox {
+    background-color: #C04ABC;
+}
+
+.tabBox:nth-child(10) .iconBox {
+    background-color: #570b54;
+}

@@ -1,0 +1,36 @@
+.mainBox {
+    // padding-right: 2rem;
+    padding-top: .2rem;
+    width: 100%;
+}
+
+.isCashWriteBox {
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
+    transform: scale(1.5) translateX(2.6rem) translateY(-.5rem);
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+    z-index: 1000;
+    border-radius: .5rem;
+    box-shadow: 0px 4px 0px 0px #00000040;
+}
+
+.closeBtn {
+    background-color: red !important;
+    padding: .3rem !important;
+}
+
+.autoSumitBox {
+    height: 80%;
+    margin-top: .4rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: .3rem;
+}

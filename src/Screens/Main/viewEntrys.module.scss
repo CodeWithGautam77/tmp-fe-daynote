@@ -1,0 +1,152 @@
+.superMain {
+    padding-top: .2rem;
+}
+
+.skeleton {
+    margin: 1rem .5rem;
+    // width: 100%;
+    max-width: 100%;
+    padding: 0rem .5rem;
+    border-radius: .5rem;
+    background-color: #FFF;
+    border: 2px solid #950000;
+    display: flex;
+    gap: .3rem;
+}
+
+.otherBtnGrp {
+    margin: .2rem .5rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .3rem;
+}
+
+.subMain {
+    // margin-top: 1rem;
+    margin: .5rem .5rem;
+    display: flex;
+    border-radius: .5rem;
+    border: 2px solid #950000;
+    max-width: 100%;
+    max-height: 44.2vh;
+    background-color: #FFF;
+}
+
+.creditBox {
+    width: 100%;
+    max-height: 95%;
+    overflow-y: scroll;
+}
+
+.verticalHr {
+    border: 1px solid #950000;
+    height: auto;
+    margin: 0;
+}
+
+.debitBox {
+    width: 100%;
+    max-height: 95%;
+    overflow-y: scroll;
+}
+
+.temBorrowBox {
+    width: 100%;
+    max-height: 95%;
+    overflow-y: scroll;
+
+}
+
+
+
+.detialBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 1rem;
+    border-bottom: 1px solid #950000;
+    // padding: .2rem 0rem;
+    height: 100%;
+    width: 100%;
+    font-size: 1.1rem;
+
+    &:last-child {
+        border-bottom: none !important; // Remove border-top for the first child
+    }
+}
+
+.indexNum {
+    margin: 0rem .5rem;
+    width: 3%;
+}
+
+.deletIcon {
+    margin-right: .3rem;
+    width: 3%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.amtText {
+    margin-bottom: 0;
+    // width: 20%;
+    min-width: 20%;
+    padding: .2rem .3rem;
+    cursor: pointer;
+    overflow-x: auto;
+}
+
+.custText {
+    text-transform: capitalize;
+    padding-left: .2rem;
+    width: 80%;
+    // height: 100%;
+    height: 28px;
+    border-left: 1px solid #950000;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.totalBox {
+    width: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+        margin-bottom: 0;
+    }
+}
+
+.dTotalText {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #950000;
+    font-weight: 700;
+    padding: .3rem 0rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .cTotalAmt {
+        font-size: 1.1rem;
+    }
+
+    .dTotalAmt {
+        font-size: 1.1rem;
+
+    }
+}

@@ -1,0 +1,70 @@
+.wrtieDiv {
+    height: 5rem;
+    border: 1px solid gray;
+    border-radius: .3rem;
+}
+
+.wrtieErrorDiv {
+    height: 5rem;
+    border: 1px solid red;
+    border-radius: .3rem
+}
+
+.errorText {
+    color: red;
+    font-size: .8rem;
+    margin-top: .3rem;
+    margin-left: .9rem;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    margin-left: .4rem;
+    gap: .5rem;
+}
+
+/* Style for the label wrapping the checkbox */
+.buttonContainer label {
+    display: flex;
+    align-items: center;
+    // flex-direction: ;
+    gap: .2rem;
+    background-color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    height: 50%;
+    // color: #333;
+}
+
+/* On hover, add some interaction */
+.buttonContainer label:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style the checkbox */
+// .buttonContainer input[type="checkbox"] {
+//     display: none;
+//     /* Hide the checkbox */
+// }
+
+/* Active button style (selected) */
+.buttonContainer input[type="checkbox"]:checked+label {
+    // display: block;
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add an icon or custom styling to differentiate checked buttons */
+.buttonContainer input[type="checkbox"]:checked+label:before {
+    content: "✔ ";
+    font-size: 18px;
+    margin-right: 10px;
+}
