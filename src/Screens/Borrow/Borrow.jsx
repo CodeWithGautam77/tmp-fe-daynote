@@ -86,12 +86,12 @@ export default function Borrow() {
 
   const handelEntryClick = (entryData) => {
     // console.log(entryData);
-    if (entryData.type && entryData.entryId) {
+    if (entryData.type && entryData.entryId && entryData.entType) {
       const navigateData = {
-        S: "/master/customers",
-        B: "/master/suppliers",
+        C: "/master/customers",
+        S: "/master/suppliers",
       };
-      const navigateTo = `${navigateData[entryData.type]}/${entryData.entryId}`;
+      const navigateTo = `${navigateData[entryData.entType]}/${entryData.entryId}`;
       // console.log(navigateTo);
       navigate(navigateTo);
     }

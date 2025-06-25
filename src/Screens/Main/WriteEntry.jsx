@@ -501,7 +501,7 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
     if (!formikCredit.values.inputText) {
       formikCredit.setFieldValue("etype", "");
     }
-  }, [formikCredit.values]);
+  }, [formikCredit.values.inputText]);
 
   useEffect(() => {
     if (formikDebit.values.inputText && !formikDebit.values.etype) {
@@ -511,7 +511,7 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
     if (!formikDebit.values.inputText) {
       formikDebit.setFieldValue("etype", "");
     }
-  }, [formikDebit.values]);
+  }, [formikDebit.values.inputText]);
 
   const handleSetEtype = (formik, type) => {
     if (formik.values.inputText) {
@@ -633,10 +633,11 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
   useEffect(() => {
     if (creditEntitys && creditEntitys.length > 0) {
       if (entityAns) {
-        formikCredit.setFieldValue(
-          "entryId",
-          creditEntitys[creditEntitys.length - 1]._id
-        );
+        formikCredit.setValues({
+          ...formikCredit.values,
+          entryId: creditEntitys[creditEntitys.length - 1]._id,
+          etype: creditEntitys[creditEntitys.length - 1].type,
+        });
         setForceAdd((oldData) => ({
           ...oldData,
           C: false,
@@ -661,10 +662,11 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
     if (debitEntitys && debitEntitys.length > 0) {
       // if (debitEntitys.length === 1 && entityAns) {
       if (entityAns) {
-        formikDebit.setFieldValue(
-          "entryId",
-          debitEntitys[debitEntitys.length - 1]._id
-        );
+        formikDebit.setValues({
+          ...formikDebit.values,
+          entryId: debitEntitys[debitEntitys.length - 1]._id,
+          etype: debitEntitys[debitEntitys.length - 1].type,
+        });
         setForceAdd((oldData) => ({
           ...oldData,
           D: false,
@@ -1134,7 +1136,11 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
                             }
                             onClick={() => {
                               setForceAdd((old) => ({ ...old, C: false }));
-                              formikCredit.setFieldValue("entryId", item._id);
+                              formikCredit.setValues({
+                                ...formikCredit.values,
+                                entryId: item._id,
+                                etype: item.type,
+                              });
                             }}
                             ref={(el) => {
                               if (el && index === creditEntitys.length - 1) {
@@ -1145,7 +1151,7 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
                               }
                             }}
                           >
-                            {item.searchName}
+                            {item.searchName} - {item.type}
                           </option>
                         ))}
                       </>
@@ -1408,7 +1414,11 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
                             }
                             onClick={() => {
                               setForceAdd((old) => ({ ...old, D: false }));
-                              formikDebit.setFieldValue("entryId", item._id);
+                              formikDebit.setValues({
+                                ...formikDebit.values,
+                                entryId: item._id,
+                                etype: item.type,
+                              });
                             }}
                             ref={(el) => {
                               if (el && index === debitEntitys.length - 1) {
@@ -1419,7 +1429,7 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
                               }
                             }}
                           >
-                            {item.searchName}
+                            {item.searchName} - {item.type}
                           </option>
                         ))}
                       </>
