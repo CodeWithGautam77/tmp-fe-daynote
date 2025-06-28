@@ -81,7 +81,7 @@ export default function WriteCreditBankAngadiaEntry({
       entryId: "",
       amount: "",
       inputText: "",
-      type: "D",
+      type: "C",
       etype: "",
       byWhom: "",
     },
@@ -108,7 +108,6 @@ export default function WriteCreditBankAngadiaEntry({
         response = await dispatch(
           addCashCreditBAEntry({
             ...values,
-            type: "C",
             entryId: null,
             baEntryId: selectedCreditBA?._id,
             uId: loggedIn._id,
@@ -241,10 +240,11 @@ export default function WriteCreditBankAngadiaEntry({
   useEffect(() => {
     if (debitEntitys && debitEntitys.length > 0) {
       if (entityAns) {
-        formikCreditBAEntry.setFieldValue(
-          "entryId",
-          debitEntitys[debitEntitys.length - 1]._id
-        );
+        formikCreditBAEntry.setValues({
+          ...formikCreditBAEntry.values,
+          entryId: debitEntitys[debitEntitys.length - 1]._id,
+          etype: debitEntitys[debitEntitys.length - 1].type,
+        });
       }
     }
   }, [debitEntitys]);
@@ -435,10 +435,11 @@ export default function WriteCreditBankAngadiaEntry({
                                 : WriteCreditBAStyle.creditEntOption
                             }
                             onClick={() => {
-                              formikCreditBAEntry.setFieldValue(
-                                "entryId",
-                                item._id
-                              );
+                              formikCreditBAEntry.setValues({
+                                ...formikCreditBAEntry.values,
+                                entryId: item._id,
+                                etype: item.type,
+                              });
                             }}
                             ref={(el) => {
                               if (el && index === debitEntitys.length - 1) {
@@ -449,7 +450,7 @@ export default function WriteCreditBankAngadiaEntry({
                               }
                             }}
                           >
-                            {item.searchName}
+                            {item.searchName} - {item.type}
                           </option>
                         ))}
                       </>

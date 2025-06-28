@@ -82,7 +82,7 @@ export default function WriteDebitAngadiaEntry({
       entryId: "",
       amount: "",
       inputText: "",
-      type: "C",
+      type: "D",
       etype: "",
       byWhom: "",
     },
@@ -108,7 +108,6 @@ export default function WriteDebitAngadiaEntry({
         response = await dispatch(
           addCashCreditBAEntry({
             ...values,
-            type: "D",
             entryId: null,
             baEntryId: selectedDebitA?._id,
             uId: loggedIn._id,
@@ -241,10 +240,11 @@ export default function WriteDebitAngadiaEntry({
   useEffect(() => {
     if (creditEntitys && creditEntitys.length > 0) {
       if (entityAns) {
-        formikDebitAEntry.setFieldValue(
-          "entryId",
-          creditEntitys[creditEntitys.length - 1]._id
-        );
+        formikDebitAEntry.setValues({
+          ...formikDebitAEntry.values,
+          entryId: creditEntitys[creditEntitys.length - 1]._id,
+          etype: creditEntitys[creditEntitys.length - 1].type,
+        });
       }
     }
   }, [creditEntitys]);
@@ -299,7 +299,7 @@ export default function WriteDebitAngadiaEntry({
             </div>
           </div>
         ) : (
-          <div style={{ width: "40%",position: "relative" }}>
+          <div style={{ width: "40%", position: "relative" }}>
             <div
               className={
                 isDebitAWriting
@@ -431,10 +431,11 @@ export default function WriteDebitAngadiaEntry({
                                 : WriteCreditBAStyle.creditEntOption
                             }
                             onClick={() => {
-                              formikDebitAEntry.setFieldValue(
-                                "entryId",
-                                item._id
-                              );
+                              formikDebitAEntry.setValues({
+                                ...formikDebitAEntry.values,
+                                entryId: item._id,
+                                etype: item.type,
+                              });
                             }}
                             ref={(el) => {
                               if (el && index === creditEntitys.length - 1) {
@@ -445,7 +446,7 @@ export default function WriteDebitAngadiaEntry({
                               }
                             }}
                           >
-                            {item.searchName}
+                            {item.searchName} - {item.type}
                           </option>
                         ))}
                       </>

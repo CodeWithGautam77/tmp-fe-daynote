@@ -109,7 +109,7 @@ export default function Main() {
 
   const handelEntryClick = (entryData) => {
     // console.log(entryData);
-    if (entryData.etype && entryData.entryId) {
+    if (entryData?.entityType && entryData.entryId) {
       const navigateData = {
         C: "/master/customers",
         S: "/master/suppliers",
@@ -119,8 +119,8 @@ export default function Main() {
         M: "/master/teams",
         SE: "/master/shopexpense",
       };
-      if (navigateData[entryData.etype]) {
-        const navigateTo = `${navigateData[entryData.etype]}/${
+      if (navigateData[entryData?.entityType]) {
+        const navigateTo = `${navigateData[entryData?.entityType]}/${
           entryData.entryId
         }`;
         navigate(navigateTo);
