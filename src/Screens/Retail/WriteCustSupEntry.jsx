@@ -277,11 +277,11 @@ export default function WriteCustSupEntry(props) {
 
   const handleCreditInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikCredit.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikCredit.setFieldValue("inputText", value);
 
     if (!isAddNew) {
-      creditDebouncedSearch(updatedValue);
+      creditDebouncedSearch(value);
     }
   };
 
@@ -301,11 +301,11 @@ export default function WriteCustSupEntry(props) {
 
   const handleDebitInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikDebit.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikDebit.setFieldValue("inputText", value);
 
     if (!isAddNew) {
-      debitDebouncedSearch(updatedValue);
+      debitDebouncedSearch(value);
     }
   };
 

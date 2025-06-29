@@ -120,9 +120,16 @@ export const convertGujaratiToEnglish = (gujaratiNumber) => {
 export const phoneConvertGujaratiToEnglish = (gujaratiNumber) => {
   let englishNumber = "";
   for (const char of gujaratiNumber) {
-    englishNumber += gujaratiToEnglishNumberMap[char] || char; // Default to the char itself if it's not a Gujarati digit
+    if (char === ".") {
+      englishNumber += ".";
+    } else {
+      englishNumber += gujaratiToEnglishNumberMap[char] || char;
+    }
   }
-  return englishNumber.trim().match(/\d+/g)?.join("");
+  return englishNumber
+    .trim()
+    .match(/[\d.]+/g)
+    ?.join("");
 };
 
 export const extractWord = (text) => {

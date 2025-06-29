@@ -163,8 +163,8 @@ export default function WriteDebitAngadiaEntry({
 
   const handleCreditInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikDebitAEntry.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikDebitAEntry.setFieldValue("inputText", value);
     creditDebouncedSearch(value);
   };
 

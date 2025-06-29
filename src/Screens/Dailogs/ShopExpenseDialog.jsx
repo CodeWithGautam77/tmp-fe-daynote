@@ -70,8 +70,8 @@ export default function ShopExpenseDialog(props) {
 
   const handleTextInput = (event, name) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formik.setFieldValue(name, updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formik.setFieldValue(name, value);
   };
 
   const handleBlur = (fieldName) => {

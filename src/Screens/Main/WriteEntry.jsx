@@ -539,11 +539,11 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
 
   const handleCreditInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikCredit.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikCredit.setFieldValue("inputText", value);
 
     if (!isAddNew) {
-      creditDebouncedSearch(updatedValue);
+      creditDebouncedSearch(value);
     }
   };
 
@@ -563,19 +563,19 @@ export default function WriteEntry({ handleShowTotal, showTotalAmount }) {
 
   const handleDebitInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikDebit.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikDebit.setFieldValue("inputText", value);
 
     if (!isAddNew) {
-      debitDebouncedSearch(updatedValue);
+      debitDebouncedSearch(value);
     }
   };
 
   const handleTempBorrowInput = (event, name) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    if (updatedValue) {
-      formikTempBorrow.setFieldValue(name, updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    if (value) {
+      formikTempBorrow.setFieldValue(name, value);
     } else {
       formikTempBorrow.setFieldValue(name, "");
     }

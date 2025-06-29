@@ -77,10 +77,13 @@ export default function EditLongtermBorrowEntry(props) {
       const cutOffPercentage = loggedIn?.cutOff || null;
 
       const finalData = {
-        ...values,
-        amount: cutOffPercentage
-          ? calculatePercentageAmount(values?.amount, cutOffPercentage)
-          : values?.amount,
+        entName: values.entName ? values.entName : oldValues.entName,
+        entArea: values.entArea ? values.entArea : oldValues.entArea,
+        entPhone: values.entPhone ? values.entPhone : oldValues.entPhone,
+        amount:
+          cutOffPercentage && values?.amount
+            ? calculatePercentageAmount(values?.amount, cutOffPercentage)
+            : oldValues?.amount,
         _id: oldValues._id,
       };
       // console.log(finalData);

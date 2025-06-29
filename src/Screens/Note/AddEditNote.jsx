@@ -90,8 +90,8 @@ export default function AddEditNote(props) {
   const handleNameInput = (event) => {
     const value = event.target.textContent;
     if (value) {
-      const updatedValue = removeEnglishWords(value);
-      formik.setFieldValue("name", updatedValue);
+      // const updatedValue = removeEnglishWords(value);
+      formik.setFieldValue("name", value);
     } else {
       formik.setFieldValue("name", "");
     }

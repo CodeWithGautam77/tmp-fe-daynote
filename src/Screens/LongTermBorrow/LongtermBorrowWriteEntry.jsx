@@ -113,8 +113,8 @@ export default function LongtermBorrowWriteEntry() {
     // setIsLongtermBorrowWriting(true);
     const value = event.target.textContent;
     if (value) {
-      const updatedValue = removeEnglishWords(value);
-      formikLongtermBorrow.setFieldValue(name, updatedValue);
+      // const updatedValue = removeEnglishWords(value);
+      formikLongtermBorrow.setFieldValue(name, value);
     } else {
       formikLongtermBorrow.setFieldValue(name, "");
     }

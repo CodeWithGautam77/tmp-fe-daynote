@@ -257,8 +257,8 @@ export default function BorrowWriteEntry() {
 
   const handleSellInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikSell.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikSell.setFieldValue("inputText", value);
 
     if (!isAddNew) {
       sellDebouncedSearch(value);
@@ -267,11 +267,11 @@ export default function BorrowWriteEntry() {
 
   const handleBuyInput = (event) => {
     const value = event.target.textContent;
-    const updatedValue = removeEnglishWords(value);
-    formikBuy.setFieldValue("inputText", updatedValue);
+    // const updatedValue = removeEnglishWords(value);
+    formikBuy.setFieldValue("inputText", value);
 
     if (!isAddNew) {
-      buyDebouncedSearch(updatedValue);
+      buyDebouncedSearch(value);
     }
   };
 
