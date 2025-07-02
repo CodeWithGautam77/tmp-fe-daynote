@@ -410,39 +410,12 @@ export default function Main() {
                 <h5 className={`${ViewEntrysStyle.amtText} flex`}>
                   {["A", "B"].includes(item.etype) && item.amount === 0
                     ? 0
-                    : item.etype !== "MR" && item.amount
+                    : item.etype !== "MR" && item.etype !== "R" && item.amount
                     ? item.amount
                     : ""}
                 </h5>
 
                 {item.etype === "A" || item.etype === "B" ? (
-                  // <BootstrapTooltip
-                  //   placement="right"
-                  //   title={
-                  //     <div style={{ fontSize: "1rem" }}>
-                  //       {item?.baAmt?.toLocaleString()}/-
-                  //     </div>
-                  //   }
-                  //   slotProps={{
-                  //     popper: {
-                  //       modifiers: [
-                  //         {
-                  //           name: "offset",
-                  //           options: {
-                  //             offset: [0, -14],
-                  //           },
-                  //         },
-                  //       ],
-                  //     },
-                  //   }}
-                  // >
-                  //   <h5
-                  //     className={`${ViewEntrysStyle.custText} flex gap-05`}
-                  //     onClick={() => handelSetCreditBAid(item)}
-                  //   >
-                  //     {item.entName}
-                  //   </h5>
-                  // </BootstrapTooltip>
                   <div className={`${ViewEntrysStyle.custText} flex`}>
                     <ViewCreditDebitBAEntrys
                       data={item}
@@ -515,7 +488,7 @@ export default function Main() {
                                 : item.etype === "P"
                                 ? `${item.entName} ચૂકતે`
                                 : item.etype === "R"
-                                ? `${item.entName} નેટ`
+                                ? `${item.entName} ${item.amount} નેટ`
                                 : item.entName}
                               {item.byWhom && <> ({item.byWhom})</>}
                             </Typography>
@@ -552,7 +525,7 @@ export default function Main() {
                             : item.etype === "P"
                             ? `${item.entName} ચૂકતે`
                             : item.etype === "R"
-                            ? `${item.entName} નેટ`
+                            ? `${item.entName} ${item.amount} નેટ`
                             : item.entName}
                           {item.byWhom && <> ({item.byWhom})</>}
                         </h5>
@@ -636,7 +609,7 @@ export default function Main() {
                 <h5 className={`${ViewEntrysStyle.amtText} flex`}>
                   {["A", "B"].includes(item.etype) && item.amount === 0
                     ? 0
-                    : item.etype !== "MR" && item.amount
+                    : item.etype !== "MR" && item.etype !== "R" && item.amount
                     ? item.amount
                     : ""}
                 </h5>
@@ -683,7 +656,7 @@ export default function Main() {
                               : item.etype === "P"
                               ? `${item.entName} ચૂકતે`
                               : item.etype === "R"
-                              ? `${item.entName} નેટ`
+                              ? `${item.entName} ${item.amount} નેટ`
                               : item.entName}{" "}
                             {item.byWhom && <> ({item.byWhom})</>}
                           </Typography>
@@ -743,7 +716,7 @@ export default function Main() {
                           : item.etype === "P"
                           ? `${item.entName} ચૂકતે`
                           : item.etype === "R"
-                          ? `${item.entName} નેટ`
+                          ? `${item.entName} ${item.amount} નેટ`
                           : item.entName}{" "}
                         {item.byWhom && <> ({item.byWhom})</>}
                       </h5>
@@ -941,7 +914,9 @@ export default function Main() {
           <div className={ViewEntrysStyle.subMain}>
             {/* --------------------------------------------- Credit Box ------------------------------------------ */}
 
-            <div style={{ width: "40%", maxHeight: "100%", overflowY: "scroll" }}>
+            <div
+              style={{ width: "40%", maxHeight: "100%", overflowY: "scroll" }}
+            >
               {convertedCreditArr.length > 0
                 ? renderCreditData(convertedCreditArr)
                 : renderCreditData(creditAcc)}
@@ -950,7 +925,9 @@ export default function Main() {
 
             {/* --------------------------------------------- Debit Box ------------------------------------------ */}
 
-            <div style={{ width: "40%", maxHeight: "100%", overflowY: "scroll" }}>
+            <div
+              style={{ width: "40%", maxHeight: "100%", overflowY: "scroll" }}
+            >
               {convertedDebitArr.length > 0
                 ? renderDebitData(convertedDebitArr)
                 : renderDebitData(debitAcc)}
@@ -959,7 +936,9 @@ export default function Main() {
 
             {/* --------------------------------------------- Temp Borrow Box ------------------------------------------ */}
 
-            <div style={{ width: "20%", maxHeight: "100%", overflowY: "scroll" }}>
+            <div
+              style={{ width: "20%", maxHeight: "100%", overflowY: "scroll" }}
+            >
               {convertedTmpBorrowArr.length > 0
                 ? renderTmpBorrowData(convertedTmpBorrowArr)
                 : renderTmpBorrowData(tempBorrow)}
