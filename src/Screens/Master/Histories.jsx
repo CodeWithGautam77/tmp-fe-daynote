@@ -288,9 +288,9 @@ const Histories = ({
                         <tr>
                           <th>Date</th>
                           <th>Description</th>
-                          <th>Credit Rs</th>
-                          <th>Debit Rs</th>
-                          <th>Balance Rs</th>
+                          <th style={{ textAlign: "end" }}>Credit Rs</th>
+                          <th style={{ textAlign: "end" }}>Debit Rs</th>
+                          <th style={{ textAlign: "end" }}>Balance Rs</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -307,17 +307,17 @@ const Histories = ({
                                 : !item.isOpen && !item.isSalesReturn && "-"}
                             </td>
                             <td className={CustStyle.amountCell}>
-                              {item.accType === "C"
-                                ? item.amount.toLocaleString()
+                              {item?.accType === "C"
+                                ? item?.amount?.toLocaleString()
                                 : "0.00"}
                             </td>
                             <td className={CustStyle.amountCell}>
                               {item.accType === "D"
-                                ? item.amount.toLocaleString()
+                                ? item?.amount?.toLocaleString()
                                 : "0.00"}
                             </td>
                             <td className={CustStyle.amountCell}>
-                              {item.balance.toLocaleString()}
+                              {item?.balance?.toLocaleString()}
                             </td>
                           </tr>
                         ))}
@@ -339,9 +339,9 @@ const Histories = ({
             <tr>
               <th>Date</th>
               <th>Description</th>
-              <th>Credit Rs</th>
-              <th>Debit Rs</th>
-              <th>Balance Rs</th>
+              <th style={{ textAlign: "end" }}>Credit Rs</th>
+              <th style={{ textAlign: "end" }}>Debit Rs</th>
+              <th style={{ textAlign: "end" }}>Balance Rs</th>
               {isDelete && <th></th>}
             </tr>
           </thead>
